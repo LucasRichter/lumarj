@@ -37,3 +37,11 @@ new Swiper( '#home-swiper-s', {
 		}
 	}
 } )
+
+
+var $input    = document.getElementById('curriculoInput'),
+    $fileName = document.getElementById('curriculoFile');
+
+$input.addEventListener('change', function(){
+  $fileName.textContent = this.value;
+});

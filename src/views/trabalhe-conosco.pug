@@ -14,7 +14,8 @@ append body
           input.contato__form__input(placeholder='Telefone')
         select#selectComprar.trabalhe__select
           option Cargo desejado
-        input.contato__form__input(placeholder='Anexe seu currículo')
+        label#curriculoFile.contato__form__input(for='curriculoInput' style='cursor: pointer') Anexe seu currículo
+        input#curriculoInput(style='display: none' type='file')
         .contato__form__block__button
           button.contato__form__button Enviar
   include ./components/newsletter.pug
