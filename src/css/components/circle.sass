@@ -1,0 +1,28 @@
+.circle
+  position: fixed
+  border-radius: 50%
+  color: white
+  font-size: 15px
+  height: 150px
+  width: 150px
+  text-align: center
+  display: flex
+  align-items: center
+  padding: 10px
+  justify-content: center
+  text-transform: uppercase
+  cursor: pointer
+  left: calc(100% - 200px)
+  line-height: 1.5em
+  font-weight: bold
+  z-index: 2
+  &:hover
+    opacity: .7
+  &--boleto
+    @extend .circle
+    background-color: #9bd300
+    top: 50%
+  &--proposta
+    @extend .circle
+    background-color: #fc8c2c
+    top: calc(50% - 180px)

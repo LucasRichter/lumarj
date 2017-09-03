@@ -1,0 +1,37 @@
+extends ./components/index
+append body
+  .lumarj__first
+    .contato__wrapper
+      .contato__block
+        .trabalhe__block
+          h1.trabalhe__text--title Locação e venda
+          sub.trabalhe__text--sub De casas e apartamentos para você realizar o seu sonho
+  .vendas__block
+    .vendas__block__middle
+      .vendas__block__form
+        select#selectComprar.header__search__select
+          option Comprar
+        select#selectApartamento.header__search__select
+          option Apartamento
+        select#selectBairro.header__search__select
+          option Bairro
+        button.contato__form__button Buscar
+      .vendas__block
+        h2.vendas__block__middle__text--title Cadastre o seu imóvel e conte com uma assessoria especializada
+        p.vendas__block__middle__text--p O compromisso da LUMARJ é colocar a melhor equipe a seu dispor e oferecer todas as ferramentas que deem tranquilidade a proprietários e inquilinos com segurança e credibilidade.
+        button.contato__form__button Cadastre
+  .vendas__last
+    .vendas__block
+      .vendas__block__middle
+        h2.vendas__last__text--title Encontre o imóvel perfeito e realize o seu sonho e o da sua família.
+        p.vendas__last__text--p Todos os nossos imóveis são vistoriados, regulados e possuem toda a documentação em dia. Eles estão prontos para você morar.
+        .vendas__block__form
+          select#selectComprar.header__search__select
+            option Comprar
+          select#selectApartamento.header__search__select
+            option Apartamento
+          select#selectBairro.header__search__select
+            option Bairro
+          button.contato__form__button Buscar
+  include ./components/newsletter.pug
+  include ./components/enderecosMaps.pug

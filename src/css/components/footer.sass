@@ -1,0 +1,33 @@
+.footer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 100%
+
+  &__block
+    &-krush
+      align-items: center
+      background-color: #cfcfcf
+      display: flex
+      flex-direction: row
+      justify-content: center
+      padding: 10px 0
+      width: 100%
+
+      &__text
+        color: #989898
+        font-family: 'Arial'
+        font-size: 12.5px
+        flex-basis: 0
+        flex-grow: 1
+        text-align: center
+
+        &--dev
+          @extend .footer__block-krush__text
+          font-family: 'Ubuntu'
+          display: flex
+          justify-content: center
+          align-items: center
+      &__img
+        padding-left: 10px

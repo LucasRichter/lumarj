@@ -1,0 +1,18 @@
+extends ./components/index
+append body
+  - var texts = [ 'Atedimento personalizado', 'Acesso Virtual', 'Suporte Financeiro', 'Suporte de Recursos Humanos' ]
+  .lumarj__first
+    .contato__wrapper
+      .contato__block
+        .trabalhe__block
+          h1.trabalhe__text--title Serviços para condomínios
+          sub.trabalhe__text--sub Com qualidade, inovação e expertise
+  .lumarj__block
+    h3.lumarj__text--first Atuando no mercado imobiliário há mais de 20 anos, a LUMARJ é referência em venda, locação, administração condomonial e assessoria de projetos de construção e arquitetura para grandes administradoras de imóveis, no Rio de Janeiro e Niterói.
+    p.lumarj__text--middle Formada por uma grande equipe especializada no ramo imobiliário, levamos nossos clientes a atingirem os resultados desejados com serviços especiais de acordo com a necessidade de cada cliente com transparência, qualidade e eficiência.
+    .lumarj__block--circles
+      - for ( var i = 0; i < texts.length; i++ ) {
+        +circle(texts[i])
+      - }
+  include ./components/newsletter.pug
+  include ./components/enderecosMaps.pug

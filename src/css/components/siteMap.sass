@@ -1,0 +1,86 @@
+.mapa-site
+  background-color: #3c3c3c
+  padding: 30px 0
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__wrapper
+    display: flex
+    width: 100%
+    max-width: 1080px
+
+  &__block
+    display: flex
+    align-items: center
+    flex-direction: column
+    flex-grow: 1
+    flex-basis: 0
+    max-width: 400px
+
+    &--first
+      @extend .mapa-site__block
+      justify-content: center
+    &--info
+      @extend .mapa-site__block
+      flex-basis: auto
+      padding-top: 15px
+      text-align: left
+      align-items: baseline
+    &__list
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      color: #989898
+      text-align: left
+      list-style: none
+      padding-top: 15px
+      margin: 0
+
+      &__link
+        padding: 5px 0
+        padding-left: 1em
+        text-indent: -.7em
+        cursor: pointer
+
+        &:hover
+          opacity: .67
+        &::before
+          content: "• "
+          color: #989898
+    &__title-list
+      color: white
+      font-size: 13.89px
+      font-weight: 600
+      text-transform: uppercase
+      padding-bottom: 15px
+    &__text
+      font-family: 'Ubuntu'
+      font-size: 12px
+      color: #6d6e71
+      padding-bottom: 20px
+      text-align: left
+      &--info
+        @extend .mapa-site__block__text
+        padding: 3px 0
+        color: #989898
+
+      &--cidade
+        @extend .mapa-site__block__text
+        padding: 3px 0
+        color: #989898
+        font-weight: bold
+
+  &__social
+    border-top: 2px solid #484848
+    padding: 30px 0
+    display: flex
+    flex-direction: row
+    justify-content: center
+    text-align: center
+
+    &__img
+      flex-grow: 1
+      flex-basis: 0

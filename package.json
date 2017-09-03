@@ -1,0 +1,35 @@
+{
+  "name": "Quarter",
+  "version": "1.0.0",
+  "description": "Quarter website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buenopw/rappanui_website.git"
+  },
+  "author": "Bueno.pw",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp"
+  },
+  "bugs": {
+    "url": "https://github.com/buenopw/rappanui_website/issues"
+  },
+  "homepage": "https://github.com/buenopw/rappanui_website#readme",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-image": "^2.10.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.3.2"
+  }
+}

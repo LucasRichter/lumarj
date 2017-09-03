@@ -1,0 +1,74 @@
+.vendas
+  &__last
+    background-image: url('../image/vendas/vendasLastBg.jpg')
+    background-position: center top
+    min-height: 458px
+    width: 100vw
+    height: 458px
+    display: flex
+    justify-content: center
+    align-items: stretch
+    flex-direction: column
+
+    &__text
+      text-align: center
+      color: white
+      max-width: 800px
+
+      &--title
+        @extend .vendas__last__text
+        font-size: 30px
+        font-weight: bold
+        padding-bottom: 30px 
+      &--p
+        @extend .vendas__last__text
+        font-size: 20px
+        padding-bottom: 30px
+
+  &__first
+    background-image: url('../image/lumarj/lumarjBg.jpg')
+    background-position: center top
+    min-height: 460px
+    width: 100vw
+    height: 460px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &__form
+      align-items: stretch
+      border: 2px solid #ececec
+      border-radius: 5px
+      display: flex
+      justify-content: center
+      padding: 50px 45px
+      flex-grow: 1
+
+    &__middle
+      max-width: 1380px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: stretch
+      padding: 50px 0
+
+      &__text
+        text-align: center
+        max-width: 900px
+        padding: 35px 0
+        &--title
+          @extend .vendas__block__middle__text
+          color: #157d7e
+          font-weight: bold
+          font-size: 30px
+        &--p
+          @extend .vendas__block__middle__text
+          font-size: 20px
+          color: #1f1f1f

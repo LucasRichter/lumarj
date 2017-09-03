@@ -1,0 +1,21 @@
+extends ./components/index
+append body
+  .trabalhe__first
+    .contato__wrapper
+      .contato__block
+        .trabalhe__block
+          h1.trabalhe__text--title Cadastre seu currículo
+          sub.trabalhe__text--sub E venha trabalhar conosco
+  .contato__block__form
+      .contato__form
+        input.contato__form__input(placeholder='Nome Completo')
+        .contato__form--middle
+          input.contato__form__input--right(placeholder='E-mail')
+          input.contato__form__input(placeholder='Telefone')
+        select#selectComprar.trabalhe__select
+          option Cargo desejado
+        input.contato__form__input(placeholder='Anexe seu currículo')
+        .contato__form__block__button
+          button.contato__form__button Enviar
+  include ./components/newsletter.pug
+  include ./components/enderecosMaps.pug

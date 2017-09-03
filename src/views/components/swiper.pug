@@ -1,0 +1,12 @@
+- var texts = [ '"A administração do meu condomínio ficou muito mais profissional com a Lumarj. Como síndico, foi a melhor coisa que eu fiz. Agora as contas estão em dia e meus condôminios têm tudo o que necessitam para ficar tranquilos" Arhutr C.', '"A administração do meu condomínio ficou muito mais profissional com a Lumarj. Como síndico, foi a melhor coisa que eu fiz. Agora as contas estão em dia e meus condôminios têm tudo o que necessitam para ficar tranquilos" Arhutr C.' ,'"A administração do meu condomínio ficou muito mais profissional com a Lumarj. Como síndico, foi a melhor coisa que eu fiz. Agora as contas estão em dia e meus condôminios têm tudo o que necessitam para ficar tranquilos" Arhutr C.' ]
+
+.swiper-main
+  .swiper-main__title
+    h2 Ninguém é melhor que os nossos clientes para falar da qualidade da Lumarj
+  .swiper-container
+    .swiper-wrapper
+      - for ( var i = 0; i < texts.length; i++ ) {
+        +slide( i, texts[i] )
+      - }
+    #next.swiper-button-prev
+    #prev.swiper-button-next

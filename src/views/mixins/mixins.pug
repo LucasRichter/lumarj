@@ -1,0 +1,37 @@
+mixin 2viaDeBoleto
+  .circle--boleto
+    p 2ª Via de boleto
+
+mixin queroUmaProposta
+  .circle--proposta
+    p Quero Uma Proposta
+
+mixin linksHome( text, link )
+  li.header__list__item
+    a(href='/'+link) !{text}
+
+mixin slide( id, text )
+  .swiper-slide
+    .mention-block
+      img.mention__img(src='image/footer/mention-'+id+'.png')
+      p !{text}
+
+mixin circle( text )
+  .lumarj__circle
+    p !{text}
+    
+mixin circleGreen( text )
+  .lumarj__circle--green
+    p !{text}
+            
+mixin condominiosListFirst( title, text )
+  li.condominios__list__text--first
+    strong !{title}
+    br
+    | !{text}
+
+mixin condominiosSecondList( id, title, text )
+  .condominios__list__item--second
+    img(src='../image/condominios/info-'+id+'.png')
+    h3.condominios__list__text--second--title !{title}
+    p.condominios__list__text--second !{text}

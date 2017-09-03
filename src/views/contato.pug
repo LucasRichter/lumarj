@@ -1,0 +1,17 @@
+extends ./components/index
+append body
+  .contato__first
+    .contato__wrapper
+      .contato__block
+        h1 Entre em contato com a gente e deixe sua crítica, dúvida ou sugestão.
+  .contato__block__form
+      .contato__form
+        input.contato__form__input(placeholder='Nome Completo')
+        .contato__form--middle
+          input.contato__form__input--right(placeholder='E-mail')
+          input.contato__form__input(placeholder='Telefone')
+        textarea.contato__form__input--textarea(placeholder='Mensagem')
+        .contato__form__block__button
+          button.contato__form__button Enviar
+  include ./components/newsletter.pug
+  include ./components/enderecosMaps.pug

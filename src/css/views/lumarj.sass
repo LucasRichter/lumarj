@@ -1,0 +1,55 @@
+.lumarj
+  &__circle
+    background-color: transparent
+    border: 2px solid #157d7e
+    border-radius: 50%
+    color: #157d7e
+    font-size: 20px
+    font-weight: bold
+    height: 211px
+    width: 211px
+    text-align: center
+    display: flex
+    align-items: center
+    padding: 10px
+    margin-right: 50px
+    justify-content: center
+    &--green
+      @extend .lumarj__circle
+      border: none
+      background-color: #98be00
+      color: white
+  &__first
+    background-image: url('../image/lumarj/lumarjBg.jpg')
+    background-position: center top
+    min-height: 706px
+    width: 100vw
+    height: 706px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  &__block
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 60px 0
+
+    &--circles
+      @extend .lumarj__block
+      flex-direction: row
+  &__text
+    padding: 40px 0
+    max-width: 1250px
+    text-align: center
+    &--first
+      @extend .lumarj__text
+      color: #157d7e
+      font-size: 30px
+      font-weight: bold
+    &--middle
+      @extend .lumarj__text
+      color: #1f1f1f
+      font-size: 20px

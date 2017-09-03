@@ -1,0 +1,98 @@
+.condominios
+  &__first
+    background-image: url('../image/condominios/condominiosBg.jpg')
+    background-position: center top
+    min-height: 892px
+    width: 100vw
+    height: 892px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  &__block
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    &--second
+      @extend .condominios__block
+      text-align: center
+      max-width: 1380px
+      width: 100vw
+      padding: 80px 0
+    &--first
+      @extend .condominios__block
+      max-width: 1500px
+      width: 100vw
+      align-items: baseline
+      text-align: left
+  &__text
+    &--last
+      color: #838383
+      font-size: 38px
+      text-align: center
+      max-width: 800px
+      padding-bottom: 20px
+      &--title
+        @extend .condominios__text--last
+        color: #226174
+        font-weight: bold
+    &--second
+      text-align: center
+      font-size: 22px
+      color: #4b4b4b
+      padding-bottom: 80px
+      max-width: 900px
+      &--title
+        @extend .condominios__text--second
+        max-width: 600px
+        color: #cf3313
+        font-size: 42px
+        padding-bottom: 15px
+    &--first
+      color: white
+      text-align: left
+      font-size: 50px
+      padding-bottom: 15px
+      max-width: 1000px
+      &--title
+        @extend .condominios__text--first
+        font-weight: bold
+        text-transform: uppercase
+  &__list
+    display: flex
+    justify-content: center
+    align-items: baseline
+    &--logos
+      @extend .condominios__list
+      align-items: center
+    &__item
+      &--second
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding-right: 45px
+        max-width: 300px
+    &--first
+      @extend .condominios__list
+      list-style-image: url('../image/condominios/listImg.png')
+      align-items: baseline
+      flex-direction: column
+    &__text
+
+      &--second
+        font-size: 20px
+        color: #4b4b4b
+        text-align: center
+        &--title
+          @extend .condominios__list__text--second
+          padding-top: 25px
+          color: #23677a
+          font-weight: bold
+      &--first
+        padding: 25px 0
+        color: white
+        font-size: 22px

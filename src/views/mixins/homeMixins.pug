@@ -1,0 +1,113 @@
+mixin swiperSlides(id)
+  .swiper-slide
+    div(class=' home__swiper--'+id)
+      div.home__swiper__block
+        h2.home__swiper__title(data-swiper-parallax='-500') A maneira mais fácil de administrar o seu condomínio
+        .condominios__list--logos(data-swiper-parallax='-600')
+          img(src='../image/home/logo-anos.png')
+          img(src='../image/home/logo-abadi.png')
+        button.contato__form__button(data-swiper-parallax='-700') SAIBA MAIS
+mixin firstSwiper
+  #home-swiper-f.swiper-container
+    .swiper-wrapper
+      - for( var i = 0; i < 3; i++ ) {
+        +swiperSlides(i)
+      - }
+- var circlesTexts = [ 'Porteiro e vigia', 'Recepcionista e ascensorista', 'Mensageiro e copeiro', 'Motorista']
+mixin circleHome(text)
+  .vantagens__circle
+    p !{text}
+
+mixin vantagens
+  .apartamentos__block
+    .apartamentos__wrapper
+      h2.vantagens__text--title Com a Lumarj seu condomínio tem
+      sub2.vantagens__text--sub diversas vantagens e benefícios
+      .vantagens__block-circles
+        - for (var i = 0; i < circlesTexts.length; i++) {
+          +circleHome(circlesTexts[i])
+        - }
+      .condominios__list--logos
+        img(src='image/condominios/logo-0.png')
+        img(src='image/condominios/logo-1.png')
+        img(src='image/condominios/logo-2.png')
+
+mixin realize
+  .realize__block
+    h2.realize__block__text--title Realize o seu sonho da casa própria
+    p.realize__block__text Encontre o imóvel perfeito para a sua família
+
+mixin apartamentos
+  .apartamentos__block
+    .apartamentos__wrapper
+      .vendas__block__form
+        select#selectComprar.header__search__select
+          option Comprar
+        select#selectApartamento.header__search__select
+          option Apartamento
+        select#selectBairro.header__search__select
+          option Bairro
+        button.contato__form__button Buscar
+      .apartamentos__block--row
+        - for( var i = 0; i < 3; i++) {
+          +apartamento(i)
+        - }
+
+mixin apartamento( id )
+  .apartamento__block
+    img(src='image/home/apartamentos/apartamento-'+id+'.jpg')
+    .apartamento__block__text--title
+      h3 Icaraí | Niterói.
+    .apartamento__block__text--details
+      p.apartamento__text Praia de Icaraí, 55 | Niterói | RJ<br/>R$ 1.900
+      .apartamento__block__text--details--row
+        .apartamento__block__text--details__text
+          p
+            strong Área m²
+          p 100
+        .apartamento__block__text--details__text
+          p
+            strong Quartos
+          p 3
+        .apartamento__block__text--details__text
+          p
+            strong Banheiros
+          p 2
+    button#detalhesAP.apartamento__button Ver detalhes
+
+- var surpresaTexts = ['Gerência de questões administrativas','Desenvolvimento de regulamento interno', 'Emissão de boletos, declarações, cobranças e orçamentos', 'Contratação e treinamento de funcionários','Gestão Online de documentção e contas']
+mixin surpresaBlock( id, text )
+  .surpresa__list__block
+    img(src='image/home/supresa/list-'+id+'.png')
+    p.surpresa__list__block__text !{text}
+
+mixin surpresa
+  .apartamentos__block
+    .apartamentos__wrapper
+      p.surpresa__text Possuímos a solução perfeita para os seus problemas. Não seja pego de surpresa e conte com a LUMARJ na administração do seu condomínio
+      .surpresa__list
+        - for ( var i = 0; i< surpresaTexts.length; i++) {
+          +surpresaBlock(i,surpresaTexts[i])
+        - }
+      +secondSwiper
+
+mixin secondSwiperSlides( id, text )
+  .swiper-slide
+    .surpresa__slide
+      img(src='image/home/supresa/swiper-'+id+'.png')
+      .surpresa__slide__text
+        p !{text}
+
+
+- var secondSwiperTexts = ['Serviços de limpeza', 'Manutenção Predial', 'Locação e Venda']
+
+mixin secondSwiper
+  .surpresa__swiper
+    #home-swiper-s.swiper-container
+      .swiper-wrapper
+        - for( var i = 0; i < secondSwiperTexts.length; i++ ) {
+          +secondSwiperSlides(i, secondSwiperTexts[i])
+        - }
+      .swiper-pagination
+      #prevS.swiper-button-prev
+      #nextS.swiper-button-next

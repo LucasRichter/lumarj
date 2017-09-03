@@ -1,0 +1,37 @@
+extends ./components/index
+append body
+  - var firstListTitles = [ 'Tranquilidade', 'Transparência', 'Agilidade', 'Comodidade' ]
+  - var firstTexts = [ 'Para você aproveitar o melhor do seu condominio', 'Para você controlar suas contas', 'Soluções para seus problemas em menos tempo', 'Para deixar seu condomínio mais eficiente' ]
+  - var secondListTitles = ['Prestação de contas','Atendimento ao cliente','Assembléia do condomínio', 'Equipe de Apoio']
+  - var secondTexts = ['Todas as contas do condomínio são digitalizadas para maiot segurança e transparência','Profissionais treinados para atender seus condômnios de maneira rápida e eficiente.', 'Organimzaos e administramos assembleias com ata, equipamentos e mediação.', 'Fornecemos seguatança, ascensorista, zelador e muito mais.']
+  - var lastTitles = ['Gestão total', 'Prestação de Contas', 'Soluções Digitais']
+  .condominios__first
+    .condominios__block--first
+      h1.condominios__text--first--title Administração de Condomínios
+      h3.condominios__text--first Porque a vida é muito mais que problemas à resolver.
+      ul.condominios__list--first
+        - for( var i = 0; i < firstListTitles.length; i++) {
+          +condominiosListFirst(firstListTitles[i], firstTexts[i])
+        - }      
+      button.contato__form__button--condominios Quero uma proposta
+  .condominios__block
+    .condominios__block--second
+      h2.condominios__text--second--title Os serviços que você sempre quis em um só lugar
+      p.condominios__text--second Aproveite mais a vida e deixe o trabalho duro com a gente. Com os serviços da LUMARJ, você tem muito mais tempo para aproveitar melhor o seu condomínio, enquanto nós cuidamos de todas as questões burocráticas, operacionais e de pessoal.
+      .condominios__list
+        - for ( var i = 0; i < secondListTitles.length; i++) {
+          +condominiosSecondList(i,secondListTitles[i],secondTexts[i])
+        - }
+  include ./components/newsletter.pug
+  .condominios__block
+    .condominios__block--second
+      h2.condominios__text--last--title A LUMARJ está há mais de 20 anos solucionando problemas de síndicos.
+      p.condominios__text--last Oferecmos uma série de serviços com qualidade e eficiência reconhecida pelo mercado.
+      .lumarj__block--circles
+        - for ( var i = 0; i < lastTitles.length; i++ ) {
+          +circleGreen(lastTitles[i])
+        - }
+      .condominios__list--logos
+        img(src='image/condominios/logo-0.png')
+        img(src='image/condominios/logo-1.png')
+        img(src='image/condominios/logo-2.png')

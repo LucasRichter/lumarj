@@ -1,0 +1,58 @@
+include ../mixins/mixins.pug
+
+head
+  meta(charset='utf-8')
+  meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1")
+  link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet")
+  link(href='https://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet')
+  link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+  link(rel="stylesheet" href="css/main.css")
+  title Lumarj
+  header.header
+    .header__block-color
+      .header__wrapper
+        .header__block
+          p Rio 3232-0000  |  Niterói 2323-0000
+        .header__block--boleto
+          p 2ª Via de boleto
+        .header__block
+          p Área do cliente
+        .header__block--social
+          a.header__img( href='#' target='_blank')
+            img.header__block__img(src='image/header/face.png')
+          a( href='#' target='_blank')
+            img.header__block__img(src='image/header/linkedin.png')
+    .header__wrapper
+      a.header__img(href='/home.html')
+        img(src='image/header/logo.png')
+      .header__search
+        select#selectComprar.header__search__select
+          option Comprar
+        select#selectApartamento.header__search__select
+          option Apartamento
+        select#selectBairro.header__search__select
+          option Bairro
+        button#buscarButton.header__search__button Buscar
+    nav.header__wrapper
+      ul.header__list
+        li.header__list__item--first
+          a(href='/home.html') home
+        - var texts = [ 'Lumarj', 'Condomínios', 'Vendas', 'Locação', 'Terceirização de Serviços', 'Trabalhe conosco', 'Contato'  ]
+        - var links = [ 'lumarj.html', 'condominios.html', 'vendas.html', 'locacao.html', 'terceirizacao.html', 'trabalhe-conosco.html', 'contato.html' ]
+        - for ( var i = 0; i < texts.length; i++ ) {
+          +linksHome(texts[i],links[i])
+        - }
+//- /*header.header
+//-   .wrapper
+//-     img(src='image/logo.png' class='logo' alt='Quarter')
+//-     .header-main_hamburger
+//-       span
+//-       span
+//-       span
+//-     nav.nav
+//-       ul.nav-list
+//-         - var texts = [ 'A Empresa', 'Area de Lazer', 'Projetos', 'Diferencias', 'Realização' ]
+//-         - var links = [ '/empresa', '/area-de-lazer', '/projetos', '/Diferencias', '/realizacao' ]
+//-         - for ( var i = 0; i < texts.length; i++ ){
+//-           +link( texts[i], links[i] )
+//-         - }*/
