@@ -50,11 +50,4 @@ gulp.task( 'watch', () => {
   gulp.watch( './src/views/**/*.pug', [ 'views' ] )
 } )
 
-gulp.task('connect', () => {
-  var server = child.spawn( 'node', ['server.js'] )
-  var log = fs.createWriteStream( 'server.log', {flags: 'a'} )
-  server.stdout.pipe( log )
-  server.stderr.pipe( log )
-} )
-
-gulp.task( 'default', [ 'connect', 'js', 'sass', 'views', 'image', 'watch', 'fonts' ] )
+gulp.task( 'default', [ 'js', 'sass', 'views', 'image', 'watch', 'fonts' ] )

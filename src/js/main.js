@@ -18,7 +18,6 @@ new Swiper( '#home-swiper-f', {
 	parallax: true,
 	autoHeight: true,
 	autoplay: 2000,
-	loop: true,
 	setWrapperSize: true,
 	effect: 'fade',
 } )

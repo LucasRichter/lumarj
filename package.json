@@ -9,7 +9,7 @@
   "author": "Bueno.pw",
   "license": "ISC",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp & node server.js"
   },
   "bugs": {
     "url": "https://github.com/buenopw/rappanui_website/issues"
