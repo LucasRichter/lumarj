@@ -15,6 +15,9 @@
     color: white
     max-width: 600px
     text-align: center
+    +below($maxwidth)
+      line-height: normal
+      max-width: 300px
 
   &__form
     align-items: stretch
@@ -23,6 +26,10 @@
     padding-top: 20px
     width: 100vw
     max-width: 600px
+    +below($maxwidth)
+      align-items: center
+      flex-direction: column
+      max-width: 300px
 
     &__input
       border: none
@@ -30,7 +37,10 @@
       font-size: 12px
       flex-grow: 1
       padding-left: 10px
-
+      +below($maxwidth)
+        padding: 10px 0
+        padding-left: 10px
+        margin: 5px 0
     &__button
       background-color: #42b352
       color: white
@@ -43,6 +53,7 @@
       padding: 10px 20px
       margin-left: 10px
       cursor: pointer
-
+      +below($maxwidth)
+        max-width: 150px
       &:hover
         opacity: .7

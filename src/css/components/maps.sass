@@ -14,6 +14,8 @@
     padding: 30px 0
     width: 100vw
     max-width: 1381px
+    +below($maxwidth)
+      flex-direction: column
 
     &-video
       align-items: center
@@ -32,3 +34,6 @@
       text-align: center
       flex-grow: 1
       flex-basis: 0
+      +below($maxwidth)
+        flex-basis: auto
+        padding: 10px 0

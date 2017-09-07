@@ -4,18 +4,24 @@
       font-size: 38px
       color: #838383
       text-align: center
+      +below($maxwidth)
+        max-width: 300px
     &--sub
       font-weight: bold
       font-size: 38px
       color: #1b8283
       text-align: center
       padding-bottom: 50px
+      +below($maxwidth)
+        max-width: 300px
   &__block
     &-circles
       display: flex
       justify-content: space-between
       align-items: center
       flex-direction: row
+      +below($maxwidth)
+        flex-direction: column
   &__circle
     background-image: linear-gradient( to bottom, #178081, #5fb9bb)
     border-radius: 50%
@@ -28,6 +34,8 @@
     align-items: center
     padding: 10px
     justify-content: center
+    +below($maxwidth)
+      margin-top: 20px
 
 .realize
   &__block
@@ -62,7 +70,8 @@
       flex-direction: row
       justify-content: space-between
       padding: 30px 0
-
+      +below($maxwidth)
+        flex-direction: column
   &__wrapper
     max-width: 1180px
     width: 100vw
@@ -70,6 +79,9 @@
     justify-content: center
     align-items: stretch
     flex-direction: column
+    +below($maxwidth)
+      max-width: 300px
+
 .apartamento
   &__text
     padding: 20px 0
@@ -99,7 +111,9 @@
     text-align: center
     max-width: 360px
     padding-right: 20px
-
+    +below($maxwidth)
+      max-width: 250px
+      padding: 10px 0
     &__text
       font-size: 16px
       flex-grow: 1
@@ -151,6 +165,9 @@
     padding-bottom: 50px
     img
       width: 100%
+    +below($maxwidth)
+      width: 100%
+      margin-left: 0
     &__text
       border-bottom-left-radius: 5px
       border-bottom-right-radius: 5px
@@ -172,6 +189,8 @@
     align-items: center
     text-align: center
     padding: 35px 0
+    +below($maxwidth)
+      flex-direction: column
 
     &__block
       display: flex
@@ -180,6 +199,9 @@
       align-items: center
       font-size: 16px
       color: #483c26
+      +below($maxwidth)
+        max-width: 300px
+        padding-bottom: 20px
 
       &__text
         padding-top: 10px
@@ -201,11 +223,21 @@
       flex-direction: column
       text-align: left
       padding: 100px 150px
+      +below($maxwidth)
+        padding: 100px 0
+        max-width: 300px
+        text-align: center
+        align-items: center
+        justify-content: center
     &__title
       color: white
       font-size: 50px
       font-weight: bold
       max-width: 800px
+      +below($maxwidth)
+        font-size: 35px
+        max-width: 300px
+        padding-bottom: 20px
     &--0
       @extend .home__swiper
       background-image: url('../image/home/swiper-1.jpg')

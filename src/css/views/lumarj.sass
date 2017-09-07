@@ -14,6 +14,8 @@
     padding: 10px
     margin-right: 50px
     justify-content: center
+    +below($maxwidth)
+      margin: 20px 0
     &--green
       @extend .lumarj__circle
       border: none
@@ -40,6 +42,8 @@
     &--circles
       @extend .lumarj__block
       flex-direction: row
+      +below($maxwidth)
+        flex-direction: column
   &__text
     padding: 40px 0
     max-width: 1250px

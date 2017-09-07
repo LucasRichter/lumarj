@@ -37,8 +37,8 @@ head
       ul.header__list
         li.header__list__item--first
           a(href='/home.html') home
-        - var texts = [ 'Lumarj', 'Condomínios', 'Vendas', 'Locação', 'Terceirização de Serviços', 'Trabalhe conosco', 'Contato'  ]
-        - var links = [ 'lumarj.html', 'condominios.html', 'vendas.html', 'locacao.html', 'terceirizacao.html', 'trabalhe-conosco.html', 'contato.html' ]
+        - var texts = [ 'Lumarj', 'Condomínios', 'Vendas', 'Locação', 'Trabalhe conosco', 'Contato'  ]
+        - var links = [ 'lumarj.html', 'condominios.html', 'vendas.html', 'locacao.html', 'trabalhe-conosco.html', 'contato.html' ]
         - for ( var i = 0; i < texts.length; i++ ) {
           +linksHome(texts[i],links[i])
         - }

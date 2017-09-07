@@ -16,6 +16,9 @@
     color: white
     max-width: 900px
     padding: 40px 0
+    +below($maxwidth)
+      padding: 10px 0
+      font-size: 24px
 
 .mention
   &-block
@@ -30,6 +33,7 @@
     line-height: 1.5em
     max-width: 270px
     text-align: center
-
+    +below($maxwidth)
+      margin-left: 20px
   &__img
     padding: 20px 0

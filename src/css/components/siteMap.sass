@@ -26,6 +26,9 @@
     display: flex
     width: 100%
     max-width: 1080px
+    +below($maxwidth)
+      flex-direction: column
+      max-width: 200px
 
   &__block
     display: flex
@@ -33,8 +36,19 @@
     flex-direction: column
     flex-grow: 1
     flex-basis: 0
-    max-width: 400px
-
+    max-width: 300px
+    +below($maxwidth)
+      flex-basis: auto
+      align-items: baseline
+      padding: 10px 0
+    &--mobile
+      @extend .mapa-site__block
+      +above($maxwidth)
+        display: none
+    &--desktop
+      @extend .mapa-site__block
+      +below($maxwidth)
+        display: none
     &--first
       @extend .mapa-site__block
       justify-content: center
