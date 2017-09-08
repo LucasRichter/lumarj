@@ -1,4 +1,6 @@
 extends ./components/index
+block link
+  - var activeLink = 'home'
 append body
   include ./mixins/homeMixins
   +firstSwiper

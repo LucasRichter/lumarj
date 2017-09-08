@@ -17,6 +17,8 @@ body
 		padding: 15px
 		font-size: 40px
 
+		+above($maxwidth)
+			display: none
 	&__list
 		align-items: center
 		display: flex
@@ -37,6 +39,10 @@ body
 			background-color: #FFF
 			z-index: 9999
 
+		li:nth-child(2)
+			&::before
+				content: ''
+				padding: 0
 		&__item
 			text-transform: uppercase
 			color: black
@@ -64,8 +70,7 @@ body
 				color: #3d9e9f
 
 				&::before
-					content: ''
-					padding: 0
+					color: black
 
 	&__search
 		align-items: stretch
@@ -162,7 +167,7 @@ body
 		@extend .header
 		position: relative
 		flex-direction: row
-		max-width: 1200px
+		max-width: 1024px
 		width: 100vw
 		+below($maxwidth)
 			flex-direction: column

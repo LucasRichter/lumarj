@@ -42,11 +42,14 @@
     &--circles
       @extend .lumarj__block
       flex-direction: row
+      max-width: 1024px
       +below($maxwidth)
         flex-direction: column
+      div:nth-last-child(1)
+        margin-right: 0
   &__text
     padding: 40px 0
-    max-width: 1250px
+    max-width: 1024px
     text-align: center
     &--first
       @extend .lumarj__text

@@ -6,9 +6,10 @@ mixin queroUmaProposta
   .circle--proposta
     p Quero Uma Proposta
 
-mixin linksHome( text, link )
-  li.header__list__item
-    a(href='/'+link) !{text}
+mixin linksHome( text, link, activeLink )
+  - var className = 'header__list__item' + ( text.toLowerCase().includes(activeLink) ? '--first' : '' )
+  li(class=className)
+    a(href='./'+link) !{text}
 
 mixin slide( id, text )
   .swiper-slide
@@ -32,6 +33,6 @@ mixin condominiosListFirst( title, text )
 
 mixin condominiosSecondList( id, title, text )
   .condominios__list__item--second
-    img(src='../image/condominios/info-'+id+'.png')
+    img(src='image/condominios/info-'+id+'.png')
     h3.condominios__list__text--second--title !{title}
     p.condominios__list__text--second !{text}

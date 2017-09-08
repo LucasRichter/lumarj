@@ -8,6 +8,7 @@ var gulp = require( 'gulp' )
 var child = require( 'child_process' )
 var fs = require( 'fs' )
 var clean = require( 'gulp-clean' )
+var plumber = require( 'gulp-plumber' )
 
 const cleanPath = ( path ) => {
   return gulp.src( path, { read: false } )
@@ -23,6 +24,7 @@ gulp.task( 'js', () => {
 
 gulp.task( 'views', [ 'clean-pug' ], () => {
   return gulp.src( './src/views/*.pug' )
+  .pipe( plumber() )
   .pipe( pug() )
   .pipe( gulp.dest( 'dest' ) )
 } )
