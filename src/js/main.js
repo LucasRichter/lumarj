@@ -35,7 +35,18 @@ new Swiper( '#home-swiper-s', {
 
 
 var $input    = document.getElementById('curriculoInput'),
-    $fileName = document.getElementById('curriculoFile');
+    $fileName = document.getElementById('curriculoFile'),
+		closeHamburger = document.querySelector('.hamburger__close'),
+		openHamburger = document.querySelector('.main_hamburger'),
+		body = document.querySelector('body');
+
+openHamburger.addEventListener('click', function() {
+	body.classList.add('hamburger-opened')
+}, false)
+
+closeHamburger.addEventListener('click', function() {
+	body.classList.remove('hamburger-opened')
+}, false)
 
 $input.addEventListener('change', function(){
   $fileName.textContent = this.value;

@@ -23,6 +23,11 @@ head
           a( href='#' target='_blank')
             img.header__block__img(src='image/header/linkedin.png')
     .header__wrapper
+      .main_hamburger
+        span
+        span
+        span
+        span
       a.header__img(href='/home.html')
         img(src='image/header/logo.png')
       .header__search
@@ -35,6 +40,8 @@ head
         button#buscarButton.header__search__button Buscar
     nav.header__wrapper
       ul.header__list
+        .hamburger__close X
+
         li.header__list__item--first
           a(href='/home.html') home
         - var texts = [ 'Lumarj', 'Condomínios', 'Vendas', 'Locação', 'Trabalhe conosco', 'Contato'  ]

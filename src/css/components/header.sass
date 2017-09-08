@@ -1,9 +1,21 @@
+body
+	&.hamburger-opened
+		.header__list
+			display: flex
+
 .header
 	align-items: center
 	display: flex
 	justify-content: center
 	flex-direction: column
 	width: 100vw
+
+	.hamburger__close
+		position: absolute
+		right: 0
+		top: 0
+		padding: 15px
+		font-size: 40px
 
 	&__list
 		align-items: center
@@ -13,6 +25,18 @@
 		list-style: none
 		padding: 20px 0
 
+		+below($maxwidth)
+			display: none
+			position: fixed
+			flex-direction: column
+			justify-content: center
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background-color: #FFF
+			z-index: 9999
+
 		&__item
 			text-transform: uppercase
 			color: black
@@ -21,9 +45,17 @@
 			font-weight: bold
 			text-align: left
 
+			+below($maxwidth)
+				display: block
+				margin: 0 auto
+				padding: 15px
+
 			&::before
 				content: '|'
 				padding: 0 10px
+
+				+below($maxwidth)
+					display: none
 
 			&:hover
 				opacity: .7
@@ -75,10 +107,60 @@
 			+below($maxwidth)
 				margin: 10px 0
 	&__img
+		position: relative
 		padding-right: 10px
 		cursor: pointer
+
+		+below($maxwidth)
+			padding-right: 0
+			max-width: 100%
+			margin: 10px 45px 0 45px
+
+			img
+				max-width: 100%
+
+	.main_hamburger
+		position: absolute
+		right: 15px
+		top: 15px
+		width: 30px
+		height: 20px
+		transform: rotate(0deg)
+		transition: .5s ease-in-out
+		cursor: pointer
+		z-index: 9
+
+		+above($maxwidth)
+			display: none
+
+		span
+			display: block
+			position: absolute
+			height: 4px
+			width: 100%
+			background-color: #a0a0a0
+			border-radius: rem(0)
+			opacity: 1
+			left: 0
+			transform: rotate(0deg)
+			transition: .25s ease-in-out
+
+			&:nth-child(1)
+				top: 0
+
+			&:nth-child(2),
+			&:nth-child(3)
+				top: 6px
+
+			&:nth-child(4)
+				top: 12px
+
+		span
+			background-color: #a0a0a0
+
 	&__wrapper
 		@extend .header
+		position: relative
 		flex-direction: row
 		max-width: 1200px
 		width: 100vw
